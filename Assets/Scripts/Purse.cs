@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Purse : MonoBehaviour
 {
     public GameObject cointText;
-    private int coins;
+    public int coins = 100;
 
     public void AddCoin(int coin)
     {
