@@ -9,7 +9,7 @@ public class TraversePath : MonoBehaviour
     private int waypointIndex = 0;
     public Pathfinder path;
 
-    private void Start()
+    private void Awake()
     {
         transform.position = path.path[waypointIndex].transform.position;
     }
@@ -21,7 +21,7 @@ public class TraversePath : MonoBehaviour
 
     private void Traverse()
     {
-        if (waypointIndex <= path.path.Length - 1)
+        if (waypointIndex < path.path.Length)
         {
             transform.position = Vector3.MoveTowards(transform.position,
                 path.path[waypointIndex].transform.position, speed * Time.deltaTime);

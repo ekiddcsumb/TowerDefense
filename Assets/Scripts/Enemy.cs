@@ -25,13 +25,13 @@ public class Enemy : MonoBehaviour
                 {
                     health--;
                     Debug.Log(health);
+                    
+                    if (health <= 0)
+                    {
+                        Destroy(hitInfo.transform.gameObject);
+                        purse.AddCoin(coinAmount);
+                    }
                 }
-            }
-            
-            if (health <= 0)
-            {
-                Destroy(hitInfo.transform.gameObject);
-                purse.AddCoin(coinAmount);
             }
         }
     }
