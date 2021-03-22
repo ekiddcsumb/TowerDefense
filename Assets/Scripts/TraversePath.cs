@@ -20,16 +20,16 @@ public class TraversePath : MonoBehaviour
     }
 
     private void Traverse()
-    {
-        if (waypointIndex < path.path.Length)
-        {
-            transform.position = Vector3.MoveTowards(transform.position,
-                path.path[waypointIndex].transform.position, speed * Time.deltaTime);
-
-            if (transform.position == path.path[waypointIndex].transform.position)
-            {
-                waypointIndex++;
-            }
-        }
-    }
+         {
+             if (waypointIndex < path.path.Length)
+             {
+                 transform.position = Vector3.MoveTowards(transform.position,
+                     path.path[waypointIndex].transform.position, speed * Time.deltaTime);
+     
+                 if (transform.position == path.path[waypointIndex].transform.position)
+                 {
+                     waypointIndex++;
+                 }
+             }
+         }
 }
